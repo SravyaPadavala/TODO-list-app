@@ -1,0 +1,76 @@
+##############################################
+### USER REGISTRATION
+POST http://localhost:8000/user-api/user
+Content-Type: application/json
+
+{
+    "name": "test1",
+    "email": "test1@gmail.com",
+    "password": "test1",
+    "todos": []
+}
+
+
+
+##############################################
+### USER LOGIN
+POST http://localhost:8000/user-api/login
+Content-Type: application/json
+
+{
+    "email": "test1@gmail.com",
+    "password": "test1"
+}
+##############################################
+
+
+##############################################
+### ADD TASK
+PUT http://localhost:8000/user-api/todo/693145a99fd50dd0c9b7f9b4
+Content-Type: application/json
+
+{
+    "taskName": "sleeping",
+    "description": "I sleep early on this day"
+}
+##############################################
+
+
+##############################################
+### EDIT TASK
+PUT http://localhost:8000/user-api/edit-todo/693145a99fd50dd0c9b7f9b4/taskid/69314c38398de010695e84dc
+Content-Type: application/json
+
+{
+    "taskName": "sleeping again",
+    "description": "I sleep early on this day",
+    "status":"pending"
+}
+##############################################
+
+
+##############################################
+### SET TASK COMPLETED / STATUS CHANGE
+
+PUT http://localhost:8000/user-api/edit-status/userid/693145a99fd50dd0c9b7f9b4/taskid/69314c38398de010695e84dc
+Content-Type: application/json
+
+{
+   
+}
+
+
+##############################################
+
+
+
+
+
+##############################################
+### DELETE TASK
+PUT http://localhost:8000/user-api/delete-todo/userid/693145a99fd50dd0c9b7f9b4/taskid/69314c38398de010695e84dc
+Content-Type: application/json
+
+{
+
+}
